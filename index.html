@@ -3,37 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SafetyGraph - Écosystème Agentique SST complet : Architecture Penta-Level, ROI 420%, 110+ Agents SCIAN sectoriels. Hub de démonstrations interactives.">
-    <meta name="keywords" content="SafetyGraph, IA SST, agents sectoriels, prédiction accidents, ROI, CNESST, conformité, architecture penta-level">
-    <title>SafetyGraph - Écosystème Agentique SST | Hub Démonstrations</title>
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="SafetyGraph - Écosystème Agentique SST">
-    <meta property="og:description" content="Révolutionnez votre HSE avec 110+ Agents IA Sectoriels. ROI 420% démontré, conformité CNESST native.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://safetygraph-demo.netlify.app/">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+    <meta name="description" content="AgenticX5 - Écosystème SafetyGraph complet avec 27+ artefacts intégrés : Architecture Penta-Level, ROI 420%, 110+ Agents SCIAN sectoriels.">
+    <title>AgenticX5 - Écosystème SafetyGraph Intégré | 27+ Artefacts</title>
     
     <style>
-        /* ========================
-           DESIGN SYSTEM SAFETYGRAPH
-           ======================== */
         :root {
             /* Couleurs Suites Agentiques */
             --sg-primary: #805ad5;
             --ignitia-primary: #e53e3e;
             --quebec-primary: #3182ce;
             --hub-primary: #38a169;
-            --events-primary: #ed8936;
+            --analytics-primary: #ed8936;
             
             /* Architecture Penta-Level */
-            --level-1: #2c5aa0;  /* C-Suite */
-            --level-2: #8e44ad;  /* HSE Manager */
-            --level-3: #e67e22;  /* Coordinator */
-            --level-4: #27ae60;  /* Supervisor */
-            --level-5: #34495e;  /* IA */
+            --level-1: #2c5aa0;
+            --level-2: #8e44ad;
+            --level-3: #e67e22;
+            --level-4: #27ae60;
+            --level-5: #34495e;
             
             /* Couleurs Système */
             --bg-primary: #1a202c;
@@ -43,33 +30,19 @@
             --text-dark: #2d3748;
             --border-light: rgba(255,255,255,0.1);
             --shadow-primary: 0 10px 25px rgba(0,0,0,0.1);
-            --shadow-heavy: 0 20px 40px rgba(0,0,0,0.15);
             
             /* Typography */
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', monospace;
             
-            /* Breakpoints Industriels */
-            --mobile: 320px;
-            --tablet: 768px;
-            --desktop: 1024px;
-            --wide: 1400px;
-            
-            /* Animation Easing */
+            /* Animation */
             --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-            --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         }
         
-        /* Reset & Base */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        
-        html {
-            font-size: 16px;
-            scroll-behavior: smooth;
         }
         
         body {
@@ -80,20 +53,17 @@
             overflow-x: hidden;
         }
         
-        /* ========================
-           HEADER ÉCOSYSTÈME
-           ======================== */
+        /* Header Principal */
         .sg-header {
             background: linear-gradient(135deg, var(--sg-primary) 0%, var(--hub-primary) 100%);
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: var(--shadow-primary);
-            backdrop-filter: blur(10px);
         }
         
         .sg-header-content {
-            max-width: var(--wide);
+            max-width: 1400px;
             margin: 0 auto;
             padding: 1rem 2rem;
             display: flex;
@@ -107,11 +77,6 @@
             gap: 1rem;
             color: var(--text-light);
             text-decoration: none;
-            transition: transform 0.3s var(--ease-smooth);
-        }
-        
-        .sg-logo-suite:hover {
-            transform: translateY(-2px);
         }
         
         .sg-logo-icon {
@@ -131,8 +96,8 @@
             font-weight: 500;
         }
         
-        /* Navigation Tabs */
-        .sg-nav-tabs {
+        /* Navigation Principale */
+        .sg-nav-main {
             display: flex;
             gap: 0.5rem;
             background: rgba(255,255,255,0.1);
@@ -141,7 +106,7 @@
             backdrop-filter: blur(10px);
         }
         
-        .sg-tab {
+        .sg-tab-main {
             background: transparent;
             border: 2px solid transparent;
             color: var(--text-light);
@@ -153,105 +118,94 @@
             font-weight: 500;
             transition: all 0.3s var(--ease-smooth);
             position: relative;
-            overflow: hidden;
         }
         
-        .sg-tab::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-        
-        .sg-tab:hover::before {
-            left: 100%;
-        }
-        
-        .sg-tab:hover,
-        .sg-tab.active {
+        .sg-tab-main:hover,
+        .sg-tab-main.active {
             background: rgba(255,255,255,0.2);
             border-color: rgba(255,255,255,0.3);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
         
-        .sg-tab.active {
+        .sg-tab-main.active {
             background: rgba(255,255,255,0.25);
             border-color: rgba(255,255,255,0.4);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
         }
         
-        /* Mobile Header */
-        .sg-mobile-toggle {
-            display: none;
-            background: transparent;
-            border: none;
+        /* Breadcrumb Navigation */
+        .sg-breadcrumb {
+            background: var(--bg-secondary);
             color: var(--text-light);
-            font-size: 1.5rem;
-            cursor: pointer;
+            padding: 0.75rem 0;
+            font-size: 0.9rem;
         }
         
-        /* ========================
-           HERO METRICS SECTION
-           ======================== */
+        .sg-breadcrumb-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .sg-breadcrumb-item {
+            color: #cbd5e0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .sg-breadcrumb-item:hover {
+            color: var(--hub-primary);
+        }
+        
+        .sg-breadcrumb-separator {
+            color: #718096;
+            margin: 0 0.5rem;
+        }
+        
+        .sg-breadcrumb-current {
+            color: var(--hub-primary);
+            font-weight: 500;
+        }
+        
+        /* Hero Metrics */
         .sg-hero-metrics {
             background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--level-5) 100%);
             color: var(--text-light);
             padding: 2rem 0;
             position: relative;
-            overflow: hidden;
-        }
-        
-        .sg-hero-metrics::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><pattern id='grid' width='10' height='10' patternUnits='userSpaceOnUse'><path d='M 10 0 L 0 0 0 10' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='0.5'/></pattern></defs><rect width='100' height='100' fill='url(%23grid)'/></svg>") repeat;
-            opacity: 0.5;
         }
         
         .sg-hero-content {
-            max-width: var(--wide);
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .sg-hero-title {
-            text-align: center;
-            margin-bottom: 2rem;
         }
         
         .sg-hero-title h2 {
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 1rem;
+            text-align: center;
             background: linear-gradient(135deg, #ffffff, var(--hub-primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
         
         .sg-hero-subtitle {
             font-size: 1.2rem;
             opacity: 0.9;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
+            text-align: center;
         }
         
         .sg-metrics-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
-            margin-top: 2rem;
         }
         
         .sg-metric-card {
@@ -262,25 +216,7 @@
             padding: 1.5rem;
             text-align: center;
             transition: all 0.3s var(--ease-smooth);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .sg-metric-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-        
-        .sg-metric-card:hover::before {
-            opacity: 1;
+            cursor: pointer;
         }
         
         .sg-metric-card:hover {
@@ -306,85 +242,287 @@
             font-weight: 600;
         }
         
-        /* ========================
-           DEMO CONTAINER
-           ======================== */
-        .sg-demo-container {
+        /* Container Principal */
+        .sg-main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
             min-height: calc(100vh - 400px);
-            position: relative;
-            background: var(--bg-light);
         }
         
-        .sg-demo-frame {
-            display: none;
-            width: 100%;
-            min-height: calc(100vh - 400px);
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s var(--ease-smooth);
+        /* Navigation Latérale */
+        .sg-sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow-primary);
+            height: fit-content;
+            position: sticky;
+            top: 200px;
         }
         
-        .sg-demo-frame.active {
+        .sg-sidebar h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--hub-primary);
+        }
+        
+        .sg-sidebar-section {
+            margin-bottom: 1.5rem;
+        }
+        
+        .sg-sidebar-section h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--level-2);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .sg-sidebar-links {
+            list-style: none;
+        }
+        
+        .sg-sidebar-links li {
+            margin-bottom: 0.3rem;
+        }
+        
+        .sg-sidebar-link {
+            color: #4a5568;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
             display: block;
-            opacity: 1;
-            transform: translateY(0);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .sg-sidebar-link:hover,
+        .sg-sidebar-link.active {
+            background: #f0fff4;
+            color: var(--hub-primary);
+            transform: translateX(4px);
+        }
+        
+        .sg-sidebar-link.active::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 3px;
+            height: 20px;
+            background: var(--hub-primary);
+            border-radius: 2px;
+        }
+        
+        /* Zone de Contenu */
+        .sg-content-area {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-primary);
+            overflow: hidden;
+        }
+        
+        .sg-content-view {
+            display: none;
+            min-height: 600px;
+        }
+        
+        .sg-content-view.active {
+            display: block;
+        }
+        
+        /* Vue iFrame */
+        .sg-iframe-view {
+            position: relative;
         }
         
         .sg-iframe-responsive {
             width: 100%;
-            height: calc(100vh - 400px);
-            min-height: 600px;
+            height: 600px;
             border: none;
-            border-radius: 0;
-            background: var(--bg-light);
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
+            background: #f8f9fa;
         }
         
-        /* Loading Spinner */
-        .sg-loading {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 10;
+        /* Vue Artefact */
+        .sg-artifact-view {
+            padding: 2rem;
+        }
+        
+        .sg-artifact-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .sg-artifact-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .sg-artifact-subtitle {
+            color: #718096;
+            font-size: 1.1rem;
+        }
+        
+        .sg-artifact-meta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .sg-meta-tag {
+            background: #e6fffa;
+            color: var(--hub-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        /* Grilles de Contenu */
+        .sg-analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .sg-analysis-card {
+            background: #f8f9fa;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s;
+        }
+        
+        .sg-analysis-card:hover {
+            border-color: var(--hub-primary);
+            box-shadow: 0 4px 12px rgba(56, 161, 105, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .sg-analysis-card h4 {
+            color: var(--level-2);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .sg-analysis-card p {
+            color: #4a5568;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        /* Tableaux */
+        .sg-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+        }
+        
+        .sg-data-table th {
+            background: var(--level-5);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        .sg-data-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .sg-data-table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        /* Graphiques Placeholder */
+        .sg-chart-container {
+            background: #f8f9fa;
+            border: 2px dashed #cbd5e0;
+            border-radius: 8px;
+            padding: 2rem;
             text-align: center;
+            margin: 1rem 0;
         }
         
-        .sg-spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(128, 90, 213, 0.3);
-            border-left: 4px solid var(--sg-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
+        .sg-chart-placeholder {
+            color: #718096;
+            font-style: italic;
         }
         
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        /* Actions & Boutons */
+        .sg-action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
         }
         
-        /* ========================
-           FOOTER ÉCOSYSTÈME
-           ======================== */
+        .sg-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-family: var(--font-primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .sg-btn-primary {
+            background: var(--hub-primary);
+            color: white;
+        }
+        
+        .sg-btn-primary:hover {
+            background: #2f855a;
+            transform: translateY(-2px);
+        }
+        
+        .sg-btn-secondary {
+            background: white;
+            color: var(--text-dark);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .sg-btn-secondary:hover {
+            border-color: var(--hub-primary);
+            color: var(--hub-primary);
+        }
+        
+        /* Footer */
         .sg-footer {
             background: var(--bg-primary);
             color: var(--text-light);
             padding: 3rem 0 2rem;
-            margin-top: auto;
+            margin-top: 3rem;
         }
         
         .sg-footer-content {
-            max-width: var(--wide);
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
-        }
-        
-        .sg-footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
-            margin-bottom: 2rem;
         }
         
         .sg-footer-section h3 {
@@ -392,9 +530,6 @@
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--hub-primary);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
         
         .sg-footer-links {
@@ -409,10 +544,7 @@
             color: #cbd5e0;
             text-decoration: none;
             font-size: 0.9rem;
-            transition: all 0.3s var(--ease-smooth);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            transition: all 0.3s;
         }
         
         .sg-footer-links a:hover {
@@ -423,27 +555,28 @@
         .sg-footer-bottom {
             border-top: 1px solid rgba(255,255,255,0.1);
             padding-top: 2rem;
+            margin-top: 2rem;
             text-align: center;
             font-size: 0.9rem;
             opacity: 0.7;
         }
         
-        /* ========================
-           RESPONSIVE DESIGN
-           ======================== */
+        /* Responsive */
         @media (max-width: 768px) {
-            .sg-header-content {
+            .sg-main-container {
+                grid-template-columns: 1fr;
                 padding: 1rem;
-                flex-direction: column;
-                gap: 1rem;
             }
             
-            .sg-nav-tabs {
+            .sg-sidebar {
+                position: static;
+            }
+            
+            .sg-nav-main {
                 flex-wrap: wrap;
-                justify-content: center;
             }
             
-            .sg-tab {
+            .sg-tab-main {
                 font-size: 0.8rem;
                 padding: 0.5rem 1rem;
             }
@@ -452,657 +585,756 @@
                 font-size: 2rem;
             }
             
-            .sg-hero-subtitle {
-                font-size: 1rem;
-            }
-            
             .sg-metrics-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-            }
-            
-            .sg-metric-card {
-                padding: 1rem;
-            }
-            
-            .sg-metric-number {
-                font-size: 1.8rem;
-            }
-            
-            .sg-iframe-responsive {
-                height: calc(100vh - 300px);
-                min-height: 500px;
             }
         }
         
-        @media (max-width: 480px) {
-            .sg-metrics-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .sg-nav-tabs {
-                padding: 0.3rem;
-                gap: 0.3rem;
-            }
-            
-            .sg-tab {
-                font-size: 0.7rem;
-                padding: 0.4rem 0.8rem;
-            }
+        /* États d'animation */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
         }
         
-        /* ========================
-           ACCESSIBILITY
-           ======================== */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* Focus States */
-        .sg-tab:focus,
-        .sg-footer-links a:focus {
-            outline: 2px solid var(--hub-primary);
-            outline-offset: 2px;
-        }
-        
-        /* ========================
-           CUSTOM ANIMATIONS
-           ======================== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .sg-hero-metrics {
-            animation: fadeInUp 0.8s var(--ease-smooth) 0.2s both;
-        }
-        
-        .sg-metric-card {
-            animation: fadeInUp 0.6s var(--ease-smooth) calc(var(--delay, 0) * 0.1s) both;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <!-- Header Écosystème -->
-    <header class="sg-header" role="banner">
+    <!-- Header Principal -->
+    <header class="sg-header">
         <div class="sg-header-content">
-            <a href="#hub" class="sg-logo-suite" aria-label="SafetyGraph - Retour à l'accueil">
+            <a href="#hub" class="sg-logo-suite">
                 <div class="sg-logo-icon">🎯</div>
                 <div class="sg-logo-text">
-                    <h1>SafetyGraph</h1>
-                    <div class="sg-tagline">Écosystème Agentique SST</div>
+                    <h1>AgenticX5</h1>
+                    <div class="sg-tagline">Écosystème SafetyGraph Intégré</div>
                 </div>
             </a>
             
-            <nav class="sg-nav-tabs" role="navigation" aria-label="Navigation principale des démos">
-                <button class="sg-tab active" 
-                        data-demo="hub" 
-                        aria-label="Hub Agentiques - 3 suites complètes"
-                        data-url="https://agentiques.netlify.app/">
+            <nav class="sg-nav-main">
+                <button class="sg-tab-main active" data-section="hub">
                     🌟 Hub Agentiques
                 </button>
-                <button class="sg-tab" 
-                        data-demo="safetygraph" 
-                        aria-label="SafetyGraph - Architecture Penta-Level complète"
-                        data-url="https://safetygraph-demo.netlify.app/presentations/landing-pages/safetygraph-agentique.html">
+                <button class="sg-tab-main" data-section="safetygraph">
                     🎯 SafetyGraph
                 </button>
-                <button class="sg-tab" 
-                        data-demo="ignitia" 
-                        aria-label="Ignitia - Tri intelligent SST"
-                        data-url="https://68d715b4f3c4620008c2dcb8--ignitia-safety-agentic.netlify.app/">
-                    🔥 Ignitia
+                <button class="sg-tab-main" data-section="analytics">
+                    📊 Analytics & Data
                 </button>
-                <button class="sg-tab" 
-                        data-demo="quebec" 
-                        aria-label="AgenticSST Québec - Conformité CNESST"
-                        data-url="https://agenticsst-quebec-demo.netlify.app/">
-                    📱 SST Québec
+                <button class="sg-tab-main" data-section="modules">
+                    🧠 Modules IA
                 </button>
-                <button class="sg-tab" 
-                        data-demo="events" 
-                        aria-label="Événements - Pré-lancement digital"
-                        data-url="https://safetygraph-demo.netlify.app/presentations/prelancement-digital.html">
-                    🚀 Événements
+                <button class="sg-tab-main" data-section="business">
+                    💼 Business
                 </button>
             </nav>
         </div>
     </header>
     
-    <!-- Hero Metrics Section -->
-    <section class="sg-hero-metrics" role="region" aria-labelledby="hero-title">
+    <!-- Breadcrumb -->
+    <nav class="sg-breadcrumb">
+        <div class="sg-breadcrumb-content">
+            <a href="#" class="sg-breadcrumb-item">AgenticX5</a>
+            <span class="sg-breadcrumb-separator">›</span>
+            <span class="sg-breadcrumb-current" id="breadcrumb-current">Hub Agentiques</span>
+        </div>
+    </nav>
+    
+    <!-- Hero Metrics -->
+    <section class="sg-hero-metrics">
         <div class="sg-hero-content">
             <div class="sg-hero-title">
-                <h2 id="hero-title">Révolutionnez votre HSE avec l'IA Prédictive</h2>
+                <h2>Révolutionnez votre HSE avec l'IA Prédictive</h2>
                 <p class="sg-hero-subtitle">
-                    Architecture Penta-Level • 110+ Agents Sectoriels SCIAN • Conformité CNESST Native • ROI Démontré
+                    Écosystème intégré • 27+ Artefacts • Architecture Penta-Level • ROI Démontré
                 </p>
             </div>
             
-            <div class="sg-metrics-grid" role="group" aria-label="Métriques de performance SafetyGraph">
-                <div class="sg-metric-card" style="--delay: 1">
-                    <div class="sg-metric-number" aria-label="420 pourcent">420%</div>
+            <div class="sg-metrics-grid">
+                <div class="sg-metric-card" data-metric="roi">
+                    <div class="sg-metric-number">420%</div>
                     <div class="sg-metric-label">ROI Démontré</div>
                 </div>
-                <div class="sg-metric-card" style="--delay: 2">
-                    <div class="sg-metric-number" aria-label="97.3 pourcent">97.3%</div>
+                <div class="sg-metric-card" data-metric="precision">
+                    <div class="sg-metric-number">97.3%</div>
                     <div class="sg-metric-label">Précision IA</div>
                 </div>
-                <div class="sg-metric-card" style="--delay: 3">
-                    <div class="sg-metric-number" aria-label="110 agents">110+</div>
+                <div class="sg-metric-card" data-metric="agents">
+                    <div class="sg-metric-number">110+</div>
                     <div class="sg-metric-label">Agents SCIAN</div>
                 </div>
-                <div class="sg-metric-card" style="--delay: 4">
-                    <div class="sg-metric-number" aria-label="4.2 millions">4.2M$</div>
+                <div class="sg-metric-card" data-metric="economies">
+                    <div class="sg-metric-number">4.2M$</div>
                     <div class="sg-metric-label">Économies</div>
                 </div>
-                <div class="sg-metric-card" style="--delay: 5">
-                    <div class="sg-metric-number" aria-label="58 interfaces">58</div>
+                <div class="sg-metric-card" data-metric="interfaces">
+                    <div class="sg-metric-number">58</div>
                     <div class="sg-metric-label">Interfaces</div>
                 </div>
-                <div class="sg-metric-card" style="--delay: 6">
-                    <div class="sg-metric-number" aria-label="6 secteurs">6</div>
-                    <div class="sg-metric-label">Secteurs</div>
+                <div class="sg-metric-card" data-metric="artefacts">
+                    <div class="sg-metric-number">27+</div>
+                    <div class="sg-metric-label">Artefacts</div>
                 </div>
             </div>
         </div>
     </section>
     
-    <!-- Demo Container -->
-    <main class="sg-demo-container" role="main">
-        <!-- Loading Indicator -->
-        <div class="sg-loading" id="loading">
-            <div class="sg-spinner"></div>
-            <p>Chargement de la démonstration...</p>
-        </div>
+    <!-- Container Principal -->
+    <main class="sg-main-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sg-sidebar">
+            <h3>Navigation</h3>
+            
+            <!-- Hub Agentiques -->
+            <div class="sg-sidebar-section" data-parent="hub">
+                <h4>🌟 Hub Agentiques</h4>
+                <ul class="sg-sidebar-links">
+                    <li><a href="#" class="sg-sidebar-link active" data-view="hub-demo">Hub Complet</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="ecosystem-agents">Écosystème Agents</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="competitive-positioning">Positionnement</a></li>
+                </ul>
+            </div>
+            
+            <!-- SafetyGraph -->
+            <div class="sg-sidebar-section" data-parent="safetygraph" style="display: none;">
+                <h4>🎯 SafetyGraph</h4>
+                <ul class="sg-sidebar-links">
+                    <li><a href="#" class="sg-sidebar-link" data-view="safetygraph-demo">Landing Complet</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="penta-level">Architecture Penta-Level</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="captures-analysis">58 Interfaces Analysées</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="protocols-evidence">Protocoles Preuves</a></li>
+                </ul>
+            </div>
+            
+            <!-- Analytics & Data -->
+            <div class="sg-sidebar-section" data-parent="analytics" style="display: none;">
+                <h4>📊 Analytics & Data</h4>
+                <ul class="sg-sidebar-links">
+                    <li><a href="#" class="sg-sidebar-link" data-view="roi-metrics">ROI & Métriques IA</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="trends-2025">Tendances IA SST 2025</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="detailed-analysis">Analyse Détaillée</a></li>
+                </ul>
+            </div>
+            
+            <!-- Modules IA -->
+            <div class="sg-sidebar-section" data-parent="modules" style="display: none;">
+                <h4>🧠 Modules IA</h4>
+                <ul class="sg-sidebar-links">
+                    <li><a href="#" class="sg-sidebar-link" data-view="ignitia-demo">Ignitia Tri Intelligent</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="storm-module">STORM Validation</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="behaviorx-module">BehaviorX Humain</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="analytics-module">Analytics Prédictifs</a></li>
+                </ul>
+            </div>
+            
+            <!-- Business -->
+            <div class="sg-sidebar-section" data-parent="business" style="display: none;">
+                <h4>💼 Business</h4>
+                <ul class="sg-sidebar-links">
+                    <li><a href="#" class="sg-sidebar-link" data-view="quebec-demo">SST Québec</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="events-demo">Événements</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="sectors-analysis">Secteurs Industriels</a></li>
+                    <li><a href="#" class="sg-sidebar-link" data-view="mutuelle-integration">Intégration Mutuelle</a></li>
+                </ul>
+            </div>
+        </aside>
         
-        <!-- Hub Agentiques -->
-        <div class="sg-demo-frame active" id="demo-hub" role="region" aria-labelledby="hub-title">
-            <h2 id="hub-title" class="sr-only">Hub Agentiques - 3 Suites Complètes</h2>
-            <iframe src="https://agentiques.netlify.app/" 
-                    class="sg-iframe-responsive"
-                    title="Hub Agentiques SST - 3 suites complètes : SafetyGraph, Ignitia, AgenticSST Quebec"
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
-            </iframe>
-        </div>
-        
-        <!-- SafetyGraph Complet -->
-        <div class="sg-demo-frame" id="demo-safetygraph" role="region" aria-labelledby="safetygraph-title">
-            <h2 id="safetygraph-title" class="sr-only">SafetyGraph - Architecture Penta-Level</h2>
-            <iframe data-src="https://safetygraph-demo.netlify.app/presentations/landing-pages/safetygraph-agentique.html"
-                    class="sg-iframe-responsive"
-                    title="SafetyGraph Agentique - Architecture Penta-Level avec 110+ agents sectoriels SCIAN"
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
-            </iframe>
-        </div>
-        
-        <!-- Ignitia Safety -->
-        <div class="sg-demo-frame" id="demo-ignitia" role="region" aria-labelledby="ignitia-title">
-            <h2 id="ignitia-title" class="sr-only">Ignitia - Tri Intelligent SST</h2>
-            <iframe data-src="https://68d715b4f3c4620008c2dcb8--ignitia-safety-agentic.netlify.app/"
-                    class="sg-iframe-responsive"
-                    title="Ignitia Safety - Système de tri intelligent SST avec 1000+ modèles IA"
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
-            </iframe>
-        </div>
-        
-        <!-- AgenticSST Quebec -->
-        <div class="sg-demo-frame" id="demo-quebec" role="region" aria-labelledby="quebec-title">
-            <h2 id="quebec-title" class="sr-only">AgenticSST Québec - Conformité CNESST</h2>
-            <iframe data-src="https://agenticsst-quebec-demo.netlify.app/"
-                    class="sg-iframe-responsive"
-                    title="AgenticSST Québec - Conformité CNESST native, Loi 25, standards provinciaux"
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
-            </iframe>
-        </div>
-        
-        <!-- Événements -->
-        <div class="sg-demo-frame" id="demo-events" role="region" aria-labelledby="events-title">
-            <h2 id="events-title" class="sr-only">Événements - Pré-lancement Digital</h2>
-            <iframe data-src="https://safetygraph-demo.netlify.app/presentations/prelancement-digital.html"
-                    class="sg-iframe-responsive"
-                    title="SafetyGraph - Page de pré-lancement digital avec formulaire de contact"
-                    loading="lazy"
-                    sandbox="allow-scripts allow-same-origin allow-forms allow-popups">
-            </iframe>
-        </div>
-    </main>
-    
-    <!-- Footer Écosystème -->
-    <footer class="sg-footer" role="contentinfo">
-        <div class="sg-footer-content">
-            <div class="sg-footer-grid">
-                <div class="sg-footer-section">
-                    <h3>🎯 SafetyGraph</h3>
-                    <ul class="sg-footer-links">
-                        <li><a href="#demo-safetygraph" aria-label="Voir la démo SafetyGraph">
-                            <span>Architecture Penta-Level</span>
-                        </a></li>
-                        <li><a href="#metrics" aria-label="Voir les métriques ROI">
-                            <span>ROI 420% Démontré</span>
-                        </a></li>
-                        <li><a href="#agents" aria-label="Découvrir les agents SCIAN">
-                            <span>110+ Agents SCIAN</span>
-                        </a></li>
-                        <li><a href="#interfaces" aria-label="Analyser les interfaces">
-                            <span>58 Interfaces Analysées</span>
-                        </a></li>
-                    </ul>
+        <!-- Zone de Contenu -->
+        <div class="sg-content-area">
+            <!-- Hub Complet (Default) -->
+            <div class="sg-content-view sg-iframe-view active" id="view-hub-demo">
+                <iframe src="https://agentiques.netlify.app/" 
+                        class="sg-iframe-responsive"
+                        title="Hub Agentiques SST Complet">
+                </iframe>
+            </div>
+            
+            <!-- Écosystème Agents -->
+            <div class="sg-content-view sg-artifact-view" id="view-ecosystem-agents">
+                <div class="sg-artifact-header">
+                    <h1 class="sg-artifact-title">Écosystème Agentique SST</h1>
+                    <p class="sg-artifact-subtitle">Graphe interactif 110+ agents autonomes sectoriels SCIAN</p>
+                    <div class="sg-artifact-meta">
+                        <span class="sg-meta-tag">Architecture Agentique</span>
+                        <span class="sg-meta-tag">110+ Agents</span>
+                        <span class="sg-meta-tag">Secteurs SCIAN</span>
+                    </div>
                 </div>
                 
-                <div class="sg-footer-section">
-                    <h3>🔥 Ignitia</h3>
-                    <ul class="sg-footer-links">
-                        <li><a href="#demo-ignitia" aria-label="Voir la démo Ignitia">
-                            <span>Tri Intelligent SST</span>
-                        </a></li>
-                        <li><a href="#ai-models" aria-label="Découvrir les modèles IA">
-                            <span>1000+ Modèles IA</span>
-                        </a></li>
-                        <li><a href="#prioritization" aria-label="Système de priorisation">
-                            <span>Priorisation Automatique</span>
-                        </a></li>
-                        <li><a href="#semantic" aria-label="Classification sémantique">
-                            <span>Classification Sémantique</span>
-                        </a></li>
-                    </ul>
+                <div class="sg-analysis-grid">
+                    <div class="sg-analysis-card">
+                        <h4>🏗️ Construction & BTP</h4>
+                        <p>Agent Chantier, Agent EPI, Agent Hauteur, Agent Sécurité Machine, Agent Gestion Risques. Spécialisés dans la prévention des chutes, gestion équipements de protection et coordination multi-corps de métiers.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🏭 Manufacture & Production</h4>
+                        <p>Agent Production, Agent Maintenance, Agent Chimique, Agent Ergonomie, Agent Qualité. Optimisation OEE sécuritaire, maintenance prédictive et gestion substances dangereuses automatisée.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🚛 Transport & Logistique</h4>
+                        <p>Agent Logistique, Agent Conduite, Agent Manutention, Agent Fatigue, Agent Sécurité Routière. Surveillance conducteurs, maintenance flotte et conformité TMD intégrée.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🏥 Santé & Services Sociaux</h4>
+                        <p>Agent Biorisques, Agent Ergonomie Soignant, Agent Stress, Agent Psychosocial, Agent Contamination. Prévention infections nosocomiales et optimisation blocs opératoires.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🏛️ Services Publics</h4>
+                        <p>Agent Conformité, Agent Réglementation, Agent Inspection, Agent Formation, Agent Audit. Sécurité événements et coordination municipale multi-juridictionnelle.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>⛏️ Mines & Énergie</h4>
+                        <p>Agent Explosifs, Agent Gaz, Agent Souterrain, Agent Équipement Lourd, Agent Environnement Extrême. Gestion haute tension et surveillance par drones automatisée.</p>
+                    </div>
                 </div>
                 
-                <div class="sg-footer-section">
-                    <h3>📱 SST Québec</h3>
-                    <ul class="sg-footer-links">
-                        <li><a href="#demo-quebec" aria-label="Voir la démo SST Québec">
-                            <span>Conformité CNESST</span>
-                        </a></li>
-                        <li><a href="#loi25" aria-label="Conformité Loi 25">
-                            <span>Loi 25 Intégrée</span>
-                        </a></li>
-                        <li><a href="#bilingual" aria-label="Interface bilingue">
-                            <span>Interface Bilingue</span>
-                        </a></li>
-                        <li><a href="#climate" aria-label="Adaptation climatique">
-                            <span>Adaptation Climatique</span>
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div class="sg-footer-section">
-                    <h3>🌟 Écosystème</h3>
-                    <ul class="sg-footer-links">
-                        <li><a href="#demo-hub" aria-label="Retour au hub principal">
-                            <span>Hub Principal</span>
-                        </a></li>
-                        <li><a href="#demo-events" aria-label="Événements et formations">
-                            <span>Événements</span>
-                        </a></li>
-                        <li><a href="#sectors" aria-label="6 secteurs industriels">
-                            <span>6 Secteurs SCIAN</span>
-                        </a></li>
-                        <li><a href="https://github.com/Preventera/safetygraph-presentation" 
-                               target="_blank" 
-                               rel="noopener noreferrer"
-                               aria-label="Repository GitHub (nouvel onglet)">
-                            <span>GitHub Repository</span>
-                        </a></li>
-                    </ul>
+                <div class="sg-action-buttons">
+                    <a href="#" class="sg-btn sg-btn-primary">🔍 Explorer Graphe Interactif</a>
+                    <a href="#" class="sg-btn sg-btn-secondary">📊 Voir Métriques par Secteur</a>
                 </div>
             </div>
             
-            <div class="sg-footer-bottom">
-                <p>&copy; 2024 SafetyGraph - Preventera & GenAISafety. Écosystème Agentique SST révolutionnaire.</p>
-                <p><em>Architecture Penta-Level • ROI Démontré • Conformité CNESST Native • Privacy-by-Design</em></p>
+            <!-- SafetyGraph Demo -->
+            <div class="sg-content-view sg-iframe-view" id="view-safetygraph-demo">
+                <iframe data-src="https://safetygraph-demo.netlify.app/presentations/landing-pages/safetygraph-agentique.html"
+                        class="sg-iframe-responsive"
+                        title="SafetyGraph Agentique - Architecture Penta-Level">
+                </iframe>
             </div>
+            
+            <!-- Architecture Penta-Level -->
+            <div class="sg-content-view sg-artifact-view" id="view-penta-level">
+                <div class="sg-artifact-header">
+                    <h1 class="sg-artifact-title">Architecture Penta-Level</h1>
+                    <p class="sg-artifact-subtitle">Orchestration intelligente sur 5 niveaux organisationnels synchronisés</p>
+                    <div class="sg-artifact-meta">
+                        <span class="sg-meta-tag">5 Niveaux</span>
+                        <span class="sg-meta-tag">Synchronisation temps réel</span>
+                        <span class="sg-meta-tag">ROI 420%</span>
+                    </div>
+                </div>
+                
+                <table class="sg-data-table">
+                    <thead>
+                        <tr>
+                            <th>Niveau</th>
+                            <th>Profil Utilisateur</th>
+                            <th>Fonctionnalités Clés</th>
+                            <th>Impact Métier</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color: #2c5aa0;">Niveau 1 - C-Suite</strong></td>
+                            <td>Directeur Général</td>
+                            <td>ROI 420%, Culture SST 84.2%, Vision business, Impact marque +23%</td>
+                            <td>Transformation HSE en avantage concurrentiel</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #8e44ad;">Niveau 2 - HSE Manager</strong></td>
+                            <td>Manager HSE</td>
+                            <td>Prédictions 6 mois, confiance 83-94%, Radar ISO 6 dimensions</td>
+                            <td>Prévention proactive incidents</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #e67e22;">Niveau 3 - Coordinateur</strong></td>
+                            <td>Safety Coordinator</td>
+                            <td>7 incidents actifs, conformité 94.3%, Timeline 24h, BBS 85.2%</td>
+                            <td>Coordination terrain scientifique</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #27ae60;">Niveau 4 - Superviseur</strong></td>
+                            <td>Chef d'Équipe</td>
+                            <td>Mon équipe 8/10, psychological safety 4.1/5, Coaching proximité</td>
+                            <td>Leadership visibility scientifique</td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color: #34495e;">Niveau 5 - IA Technique</strong></td>
+                            <td>Analyste Sécurité</td>
+                            <td>12 anomalies, 96.4% précision, 0.8s temps réponse</td>
+                            <td>Intervention immédiate automatisée</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="sg-action-buttons">
+                    <a href="#" class="sg-btn sg-btn-primary">🎯 Voir Interfaces par Niveau</a>
+                    <a href="#" class="sg-btn sg-btn-secondary">📈 Analyser Synchronisation</a>
+                </div>
+            </div>
+            
+            <!-- 58 Interfaces Analysées -->
+            <div class="sg-content-view sg-artifact-view" id="view-captures-analysis">
+                <div class="sg-artifact-header">
+                    <h1 class="sg-artifact-title">Analyse Détaillée - 58 Interfaces</h1>
+                    <p class="sg-artifact-subtitle">Correspondances modules ↔ profils ↔ fonctionnalités par niveau penta-level</p>
+                    <div class="sg-artifact-meta">
+                        <span class="sg-meta-tag">58 Captures</span>
+                        <span class="sg-meta-tag">5 Profils</span>
+                        <span class="sg-meta-tag">Documentation Complète</span>
+                    </div>
+                </div>
+                
+                <div class="sg-chart-container">
+                    <div class="sg-chart-placeholder">
+                        📊 Graphique de répartition des interfaces par niveau penta-level<br>
+                        <small>Données : C-Suite (12%), HSE Manager (23%), Safety Coordinator (31%), Supervisor (20%), IA (14%)</small>
+                    </div>
+                </div>
+                
+                <div class="sg-analysis-grid">
+                    <div class="sg-analysis-card">
+                        <h4>📋 Architecture Penta-Level</h4>
+                        <p><strong>Directeur Général :</strong> ROI 420%, Culture SST 84.2%, 4.2M$ économies. Orchestration 5 niveaux synchronisés avec justification investissements + benchmark Top 1%.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🎛️ C-Suite Boardroom</h4>
+                        <p><strong>Comité Direction :</strong> Vision business, impact marque +23%, productivité +12%. Intelligence exécutive temps réel pour transformation HSE en avantage concurrentiel.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>👔 Safety Coordinator Operations</h4>
+                        <p><strong>Coordinateur Sécurité :</strong> 7 incidents actifs, conformité 94.3%, BBS 85.2%. Timeline 24h + alertes intelligentes pour coordination terrain scientifique.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>⏱️ BBS Performance Temps Réel</h4>
+                        <p><strong>Safety Coordinator :</strong> 47/60 observations, 88.7% comportements sûrs, coaching 78/22. Coaching ratio optimal scientifique pour amélioration comportements mesurable.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>📊 Analytics Prédictifs IA</h4>
+                        <p><strong>HSE Manager :</strong> Prédictions 6 mois, confiance 83-94%. Pattern recognition + ML avancé pour prévention proactive incidents.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🔍 Détection Anomalies</h4>
+                        <p><strong>Analyste Sécurité :</strong> 12 anomalies, 96.4% précision, 0.8s temps réponse. Surveillance intelligente temps réel pour intervention immédiate automatisée.</p>
+                    </div>
+                </div>
+                
+                <div class="sg-action-buttons">
+                    <a href="#" class="sg-btn sg-btn-primary">📖 Voir Analyse Complète (PDF)</a>
+                    <a href="#" class="sg-btn sg-btn-secondary">🔍 Explorer par Interface</a>
+                </div>
+            </div>
+            
+            <!-- ROI & Métriques IA -->
+            <div class="sg-content-view sg-artifact-view" id="view-roi-metrics">
+                <div class="sg-artifact-header">
+                    <h1 class="sg-artifact-title">ROI & Métriques IA SST</h1>
+                    <p class="sg-artifact-subtitle">Dashboard ROI 420%, économies 4.2M$, métriques temps réel par secteur industriel</p>
+                    <div class="sg-artifact-meta">
+                        <span class="sg-meta-tag">ROI 420%</span>
+                        <span class="sg-meta-tag">4.2M$ Économies</span>
+                        <span class="sg-meta-tag">6 Secteurs</span>
+                    </div>
+                </div>
+                
+                <div class="sg-metrics-grid">
+                    <div class="sg-analysis-card">
+                        <h4>🏗️ Construction - ROI 387%</h4>
+                        <p><strong>Incidents évités :</strong> 2,847 hauteur + 580K$ économies assurance<br>
+                        <strong>Impact :</strong> Réduction 63% accidents graves, certification ISO 45001 accélérée</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🏭 Manufacture - ROI 445%</h4>
+                        <p><strong>Économies :</strong> 1.8M$ arrêts production + 73% incidents changements équipe<br>
+                        <strong>Impact :</strong> OEE sécuritaire +12%, maintenance prédictive optimisée</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🏥 Santé - ROI 523%</h4>
+                        <p><strong>Burnout réduit :</strong> 34% personnel soignant + 2.3M$ économies RH<br>
+                        <strong>Impact :</strong> Qualité soins +18%, rétention personnel +27%</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🚛 Transport - ROI 312%</h4>
+                        <p><strong>Sécurité routière :</strong> 890K$ économies accidents + primes réduites<br>
+                        <strong>Impact :</strong> Fatigue conducteur -41%, maintenance flotte optimisée</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>⛏️ Mines - ROI 634%</h4>
+                        <p><strong>Haute criticité :</strong> 3.1M$ économies urgences + décès évités<br>
+                        <strong>Impact :</strong> Environnements extrêmes sécurisés, drones intégrés</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🏛️ Public - ROI 278%</h4>
+                        <p><strong>Conformité :</strong> 1.2M$ économies admin + CNESST native<br>
+                        <strong>Impact :</strong> Multi-juridictionnel harmonisé, transparence citoyenne</p>
+                    </div>
+                </div>
+                
+                <div class="sg-chart-container">
+                    <div class="sg-chart-placeholder">
+                        📈 Graphique évolution ROI par secteur sur 24 mois<br>
+                        <small>Tendance : Croissance 23% trimestre, plateau excellence atteint mois 18</small>
+                    </div>
+                </div>
+                
+                <div class="sg-action-buttons">
+                    <a href="#" class="sg-btn sg-btn-primary">💰 Calculer ROI Personnalisé</a>
+                    <a href="#" class="sg-btn sg-btn-secondary">📊 Benchmark Sectoriel</a>
+                </div>
+            </div>
+            
+            <!-- Ignitia Demo -->
+            <div class="sg-content-view sg-iframe-view" id="view-ignitia-demo">
+                <iframe data-src="https://68d715b4f3c4620008c2dcb8--ignitia-safety-agentic.netlify.app/"
+                        class="sg-iframe-responsive"
+                        title="Ignitia - Tri Intelligent SST">
+                </iframe>
+            </div>
+            
+            <!-- SST Québec Demo -->
+            <div class="sg-content-view sg-iframe-view" id="view-quebec-demo">
+                <iframe data-src="https://agenticsst-quebec-demo.netlify.app/"
+                        class="sg-iframe-responsive"
+                        title="AgenticSST Québec - Conformité CNESST">
+                </iframe>
+            </div>
+            
+            <!-- Événements Demo -->
+            <div class="sg-content-view sg-iframe-view" id="view-events-demo">
+                <iframe data-src="https://safetygraph-demo.netlify.app/presentations/prelancement-digital.html"
+                        class="sg-iframe-responsive"
+                        title="SafetyGraph - Pré-lancement Digital">
+                </iframe>
+            </div>
+            
+            <!-- Modules STORM/BehaviorX/Analytics -->
+            <div class="sg-content-view sg-artifact-view" id="view-storm-module">
+                <div class="sg-artifact-header">
+                    <h1 class="sg-artifact-title">STORM - Validation Scientifique</h1>
+                    <p class="sg-artifact-subtitle">Base de 1000+ études peer-reviewed pour crédibilité académique maximale</p>
+                    <div class="sg-artifact-meta">
+                        <span class="sg-meta-tag">1000+ Études</span>
+                        <span class="sg-meta-tag">Peer-reviewed</span>
+                        <span class="sg-meta-tag">Validation Académique</span>
+                    </div>
+                </div>
+                
+                <div class="sg-analysis-grid">
+                    <div class="sg-analysis-card">
+                        <h4>📚 Base Scientifique</h4>
+                        <p>Compilation de 1000+ études peer-reviewed des sources les plus réputées : NIOSH, OSHA, BLS, Cochrane Reviews, avec méthodologies validées et reproductibles.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🔬 Méthodologie STORM</h4>
+                        <p>Systematic Training, Observation, Research & Monitoring. Approche scientifique rigoureuse pour validation continue des algorithmes prédictifs.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>📈 Evidence-Based HSE</h4>
+                        <p>Chaque recommandation IA est traçable vers études scientifiques validées, garantissant crédibilité et acceptabilité par comités scientifiques.</p>
+                    </div>
+                    <div class="sg-analysis-card">
+                        <h4>🎯 Validation Continue</h4>
+                        <p>Processus d'amélioration continue avec feedback terrain intégré aux publications académiques pour enrichissement mutuel.</p>
+                    </div>
+                </div>
+                
+                <div class="sg-action-buttons">
+                    <a href="#" class="sg-btn sg-btn-primary">📖 Accéder Base STORM</a>
+                    <a href="#" class="sg-btn sg-btn-secondary">🔬 Voir Méthodologie</a>
+                </div>
+            </div>
+            
+            <!-- Autres vues similaires pour BehaviorX, Analytics, etc. -->
+            <div class="sg-content-view sg-artifact-view" id="view-behaviorx-module">
+                <div class="sg-artifact-header">
+                    <h1 class="sg-artifact-title">BehaviorX - L'Humain au Cœur</h1>
+                    <p class="sg-artifact-subtitle">Module analyse comportementale avec intégrations SST et coaching personnalisé IA</p>
+                </div>
+                <p>Contenu détaillé du module BehaviorX...</p>
+            </div>
+            
+            <div class="sg-content-view sg-artifact-view" id="view-analytics-module">
+                <div class="sg-artifact-header">
+                    <h1 class="sg-artifact-title">Analytics Prédictifs - Saint Graal</h1>
+                    <p class="sg-artifact-subtitle">Symphonie d'algorithmes : XGBoost, LSTM, Random Forest pour prédictions 6 mois</p>
+                </div>
+                <p>Contenu détaillé des analytics prédictifs...</p>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="sg-footer">
+        <div class="sg-footer-content">
+            <div class="sg-footer-section">
+                <h3>🎯 SafetyGraph</h3>
+                <ul class="sg-footer-links">
+                    <li><a href="#view-penta-level">Architecture Penta-Level</a></li>
+                    <li><a href="#view-roi-metrics">ROI 420% Démontré</a></li>
+                    <li><a href="#view-ecosystem-agents">110+ Agents SCIAN</a></li>
+                    <li><a href="#view-captures-analysis">58 Interfaces Analysées</a></li>
+                </ul>
+            </div>
+            
+            <div class="sg-footer-section">
+                <h3>🧠 Modules IA</h3>
+                <ul class="sg-footer-links">
+                    <li><a href="#view-storm-module">STORM Validation</a></li>
+                    <li><a href="#view-behaviorx-module">BehaviorX Humain</a></li>
+                    <li><a href="#view-analytics-module">Analytics Prédictifs</a></li>
+                    <li><a href="#view-ignitia-demo">Ignitia Tri Intelligent</a></li>
+                </ul>
+            </div>
+            
+            <div class="sg-footer-section">
+                <h3>📊 Analytics & Data</h3>
+                <ul class="sg-footer-links">
+                    <li><a href="#view-roi-metrics">ROI & Métriques IA</a></li>
+                    <li><a href="#view-trends-2025">Tendances IA SST 2025</a></li>
+                    <li><a href="#view-detailed-analysis">Analyse Détaillée</a></li>
+                    <li><a href="#view-protocols-evidence">Protocoles Preuves</a></li>
+                </ul>
+            </div>
+            
+            <div class="sg-footer-section">
+                <h3>💼 Business</h3>
+                <ul class="sg-footer-links">
+                    <li><a href="#view-quebec-demo">SST Québec CNESST</a></li>
+                    <li><a href="#view-events-demo">Événements</a></li>
+                    <li><a href="#view-sectors-analysis">Secteurs Industriels</a></li>
+                    <li><a href="https://github.com/Preventera/AgenticX5-Web-Portal" target="_blank">GitHub Repository</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="sg-footer-bottom">
+            <p>&copy; 2024 AgenticX5 - Preventera & GenAISafety. Écosystème SafetyGraph Intégré.</p>
+            <p><em>27+ Artefacts • Architecture Penta-Level • ROI Démontré • Conformité CNESST Native</em></p>
         </div>
     </footer>
     
     <!-- JavaScript Orchestrateur -->
     <script>
-        // ========================
-        // SAFETYGRAPH ECOSYSTEM ORCHESTRATOR
-        // ========================
-        class SafetyGraphEcosystem {
+        class AgenticX5Portal {
             constructor() {
-                this.currentDemo = 'hub';
-                this.demos = {
-                    hub: {
-                        url: 'https://agentiques.netlify.app/',
-                        title: 'Hub Agentiques SST',
-                        color: '#38a169'
-                    },
-                    safetygraph: {
-                        url: 'https://safetygraph-demo.netlify.app/presentations/landing-pages/safetygraph-agentique.html',
-                        title: 'SafetyGraph Agentique',
-                        color: '#805ad5'
-                    },
-                    ignitia: {
-                        url: 'https://68d715b4f3c4620008c2dcb8--ignitia-safety-agentic.netlify.app/',
-                        title: 'Ignitia Safety',
-                        color: '#e53e3e'
-                    },
-                    quebec: {
-                        url: 'https://agenticsst-quebec-demo.netlify.app/',
-                        title: 'AgenticSST Québec',
-                        color: '#3182ce'
-                    },
-                    events: {
-                        url: 'https://safetygraph-demo.netlify.app/presentations/prelancement-digital.html',
-                        title: 'Événements SafetyGraph',
-                        color: '#ed8936'
-                    }
-                };
-                
+                this.currentSection = 'hub';
+                this.currentView = 'hub-demo';
                 this.init();
             }
             
             init() {
-                this.initNavigation();
+                this.initMainNavigation();
+                this.initSidebarNavigation();
+                this.initMetricsInteraction();
                 this.initLazyLoading();
                 this.initAccessibility();
-                this.initAnalytics();
-                this.hideLoading();
             }
             
-            initNavigation() {
-                const tabs = document.querySelectorAll('.sg-tab');
+            initMainNavigation() {
+                const mainTabs = document.querySelectorAll('.sg-tab-main');
                 
-                tabs.forEach(tab => {
+                mainTabs.forEach(tab => {
                     tab.addEventListener('click', (e) => {
-                        const demoId = e.currentTarget.dataset.demo;
-                        this.switchDemo(demoId);
-                    });
-                    
-                    // Keyboard support
-                    tab.addEventListener('keydown', (e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault();
-                            const demoId = e.currentTarget.dataset.demo;
-                            this.switchDemo(demoId);
-                        }
+                        const section = e.currentTarget.dataset.section;
+                        this.switchSection(section);
                     });
                 });
             }
             
-            switchDemo(demoId) {
-                if (demoId === this.currentDemo) return;
+            switchSection(section) {
+                if (section === this.currentSection) return;
                 
-                // Update tabs
-                document.querySelectorAll('.sg-tab').forEach(tab => {
+                // Update main tabs
+                document.querySelectorAll('.sg-tab-main').forEach(tab => {
                     tab.classList.remove('active');
-                    tab.setAttribute('aria-selected', 'false');
+                });
+                document.querySelector(`[data-section="${section}"]`).classList.add('active');
+                
+                // Update sidebar sections
+                document.querySelectorAll('.sg-sidebar-section').forEach(sidebarSection => {
+                    sidebarSection.style.display = 'none';
                 });
                 
-                const activeTab = document.querySelector(`[data-demo="${demoId}"]`);
-                activeTab.classList.add('active');
-                activeTab.setAttribute('aria-selected', 'true');
-                
-                // Update frames with smooth transition
-                document.querySelectorAll('.sg-demo-frame').forEach(frame => {
-                    frame.classList.remove('active');
-                });
-                
-                // Small delay for smooth transition
-                setTimeout(() => {
-                    const targetFrame = document.getElementById(`demo-${demoId}`);
-                    targetFrame.classList.add('active');
+                const targetSidebar = document.querySelector(`[data-parent="${section}"]`);
+                if (targetSidebar) {
+                    targetSidebar.style.display = 'block';
                     
-                    // Lazy load iframe if not loaded yet
-                    const iframe = targetFrame.querySelector('iframe');
-                    if (iframe.dataset.src && !iframe.src) {
-                        this.showLoading();
-                        iframe.src = iframe.dataset.src;
-                        iframe.onload = () => this.hideLoading();
+                    // Auto-select first item in new section
+                    const firstLink = targetSidebar.querySelector('.sg-sidebar-link');
+                    if (firstLink) {
+                        document.querySelectorAll('.sg-sidebar-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        firstLink.classList.add('active');
+                        
+                        const viewId = firstLink.dataset.view;
+                        this.switchView(viewId);
                     }
-                }, 150);
+                }
                 
-                // Analytics & Update state
-                this.trackDemoSwitch(demoId);
-                this.currentDemo = demoId;
+                // Update breadcrumb
+                this.updateBreadcrumb(section);
                 
-                // Update URL hash
-                history.replaceState(null, null, `#${demoId}`);
+                this.currentSection = section;
+            }
+            
+            initSidebarNavigation() {
+                const sidebarLinks = document.querySelectorAll('.sg-sidebar-link');
+                
+                sidebarLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const viewId = e.currentTarget.dataset.view;
+                        
+                        // Update active link
+                        document.querySelectorAll('.sg-sidebar-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        e.currentTarget.classList.add('active');
+                        
+                        this.switchView(viewId);
+                    });
+                });
+            }
+            
+            switchView(viewId) {
+                if (viewId === this.currentView) return;
+                
+                // Hide all views
+                document.querySelectorAll('.sg-content-view').forEach(view => {
+                    view.classList.remove('active');
+                });
+                
+                // Show target view
+                const targetView = document.getElementById(`view-${viewId}`);
+                if (targetView) {
+                    targetView.classList.add('active');
+                    targetView.classList.add('fade-in');
+                    
+                    // Lazy load iframe if needed
+                    const iframe = targetView.querySelector('iframe[data-src]');
+                    if (iframe && !iframe.src) {
+                        iframe.src = iframe.dataset.src;
+                    }
+                }
+                
+                this.currentView = viewId;
+                this.trackViewSwitch(viewId);
+            }
+            
+            updateBreadcrumb(section) {
+                const breadcrumbCurrent = document.getElementById('breadcrumb-current');
+                const sectionNames = {
+                    hub: 'Hub Agentiques',
+                    safetygraph: 'SafetyGraph',
+                    analytics: 'Analytics & Data',
+                    modules: 'Modules IA',
+                    business: 'Business'
+                };
+                
+                breadcrumbCurrent.textContent = sectionNames[section] || section;
+            }
+            
+            initMetricsInteraction() {
+                const metricCards = document.querySelectorAll('.sg-metric-card');
+                
+                metricCards.forEach(card => {
+                    card.addEventListener('click', (e) => {
+                        const metric = e.currentTarget.dataset.metric;
+                        this.showMetricDetail(metric);
+                    });
+                });
+            }
+            
+            showMetricDetail(metric) {
+                // Navigate to relevant detailed view based on metric
+                const metricViews = {
+                    roi: 'roi-metrics',
+                    precision: 'analytics-module',
+                    agents: 'ecosystem-agents',
+                    economies: 'roi-metrics',
+                    interfaces: 'captures-analysis',
+                    artefacts: 'detailed-analysis'
+                };
+                
+                const targetView = metricViews[metric];
+                if (targetView) {
+                    // Switch to analytics section if needed
+                    if (['roi-metrics', 'detailed-analysis'].includes(targetView)) {
+                        this.switchSection('analytics');
+                    } else if (['analytics-module'].includes(targetView)) {
+                        this.switchSection('modules');
+                    } else if (['ecosystem-agents'].includes(targetView)) {
+                        this.switchSection('hub');
+                    }
+                    
+                    // Small delay to allow section switch
+                    setTimeout(() => {
+                        this.switchView(targetView);
+                    }, 300);
+                }
             }
             
             initLazyLoading() {
-                // Preload critical demo (safetygraph) after initial load
+                // Preload critical views after initial load
                 setTimeout(() => {
-                    const safetygraphIframe = document.querySelector('#demo-safetygraph iframe');
-                    if (safetygraphIframe && safetygraphIframe.dataset.src) {
-                        safetygraphIframe.src = safetygraphIframe.dataset.src;
-                    }
-                }, 2000);
+                    const criticalViews = ['safetygraph-demo', 'roi-metrics'];
+                    criticalViews.forEach(viewId => {
+                        const view = document.getElementById(`view-${viewId}`);
+                        if (view) {
+                            const iframe = view.querySelector('iframe[data-src]');
+                            if (iframe && !iframe.src) {
+                                iframe.src = iframe.dataset.src;
+                            }
+                        }
+                    });
+                }, 3000);
             }
             
             initAccessibility() {
-                // Set initial ARIA states
-                document.querySelectorAll('.sg-tab').forEach((tab, index) => {
-                    tab.setAttribute('role', 'tab');
-                    tab.setAttribute('aria-selected', tab.classList.contains('active'));
-                    tab.setAttribute('tabindex', tab.classList.contains('active') ? '0' : '-1');
-                });
-                
-                // Keyboard navigation between tabs
-                document.addEventListener('keydown', (e) => {
-                    const tabs = Array.from(document.querySelectorAll('.sg-tab'));
-                    const currentTab = document.activeElement;
-                    const currentIndex = tabs.indexOf(currentTab);
-                    
-                    if (currentIndex === -1) return;
-                    
-                    let nextIndex;
-                    
-                    switch(e.key) {
-                        case 'ArrowRight':
-                        case 'ArrowDown':
-                            e.preventDefault();
-                            nextIndex = (currentIndex + 1) % tabs.length;
-                            break;
-                        case 'ArrowLeft':
-                        case 'ArrowUp':
-                            e.preventDefault();
-                            nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-                            break;
-                        case 'Home':
-                            e.preventDefault();
-                            nextIndex = 0;
-                            break;
-                        case 'End':
-                            e.preventDefault();
-                            nextIndex = tabs.length - 1;
-                            break;
-                    }
-                    
-                    if (nextIndex !== undefined) {
-                        tabs[nextIndex].focus();
-                    }
-                });
-                
-                // Alt + number shortcuts
+                // Keyboard navigation
                 document.addEventListener('keydown', (e) => {
                     if (e.altKey && !e.ctrlKey && !e.shiftKey) {
                         const keyMap = {
                             '1': 'hub',
                             '2': 'safetygraph',
-                            '3': 'ignitia',
-                            '4': 'quebec',
-                            '5': 'events'
+                            '3': 'analytics',
+                            '4': 'modules',
+                            '5': 'business'
                         };
                         
                         if (keyMap[e.key]) {
                             e.preventDefault();
-                            this.switchDemo(keyMap[e.key]);
+                            this.switchSection(keyMap[e.key]);
                         }
                     }
                 });
+                
+                // ARIA updates
+                this.updateAriaStates();
             }
             
-            initAnalytics() {
-                // Track demo engagement time
-                this.startTime = Date.now();
-                
-                // Track iframe interactions
-                window.addEventListener('message', (event) => {
-                    if (event.data.type === 'demo-interaction') {
-                        this.trackInteraction(event.data);
-                    }
+            updateAriaStates() {
+                document.querySelectorAll('.sg-tab-main').forEach(tab => {
+                    tab.setAttribute('role', 'tab');
+                    tab.setAttribute('aria-selected', tab.classList.contains('active'));
                 });
-                
-                // Track time spent per demo
-                setInterval(() => {
-                    this.trackEngagement();
-                }, 30000); // Every 30 seconds
             }
             
-            trackDemoSwitch(demoId) {
-                const demo = this.demos[demoId];
-                console.log(`🎯 Demo switched to: ${demo.title}`);
+            trackViewSwitch(viewId) {
+                console.log(`🎯 View switched to: ${viewId}`);
                 
-                // Google Analytics 4
                 if (window.gtag) {
-                    gtag('event', 'demo_switch', {
-                        demo_name: demoId,
-                        demo_title: demo.title,
-                        previous_demo: this.currentDemo,
+                    gtag('event', 'view_switch', {
+                        view_name: viewId,
+                        section: this.currentSection,
                         timestamp: new Date().toISOString()
                     });
                 }
-                
-                // Custom analytics
-                if (window.safetygraphAnalytics) {
-                    window.safetygraphAnalytics.track('demo_switch', {
-                        demo: demoId,
-                        title: demo.title,
-                        url: demo.url
-                    });
-                }
-            }
-            
-            trackInteraction(data) {
-                console.log('📊 Demo interaction:', data);
-                
-                if (window.gtag) {
-                    gtag('event', 'demo_interaction', {
-                        demo_name: this.currentDemo,
-                        interaction_type: data.type,
-                        interaction_data: data.data
-                    });
-                }
-            }
-            
-            trackEngagement() {
-                const currentTime = Date.now();
-                const timeSpent = Math.round((currentTime - this.startTime) / 1000);
-                
-                if (window.gtag) {
-                    gtag('event', 'demo_engagement', {
-                        demo_name: this.currentDemo,
-                        time_spent: timeSpent,
-                        session_duration: timeSpent
-                    });
-                }
-            }
-            
-            showLoading() {
-                const loading = document.getElementById('loading');
-                if (loading) loading.style.display = 'block';
-            }
-            
-            hideLoading() {
-                const loading = document.getElementById('loading');
-                if (loading) loading.style.display = 'none';
-            }
-            
-            // Public API
-            switchToDemo(demoId) {
-                if (this.demos[demoId]) {
-                    this.switchDemo(demoId);
-                }
-            }
-            
-            getCurrentDemo() {
-                return {
-                    id: this.currentDemo,
-                    ...this.demos[this.currentDemo]
-                };
             }
         }
         
-        // ========================
-        // INITIALIZATION
-        // ========================
+        // Initialize when DOM is loaded
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize ecosystem
-            window.SafetyGraphEcosystem = new SafetyGraphEcosystem();
-            
-            // Handle URL hash on page load
-            const hash = window.location.hash.substring(1);
-            if (hash && window.SafetyGraphEcosystem.demos[hash]) {
-                window.SafetyGraphEcosystem.switchToDemo(hash);
-            }
-            
-            // Handle browser back/forward
-            window.addEventListener('popstate', () => {
-                const hash = window.location.hash.substring(1);
-                if (hash && window.SafetyGraphEcosystem.demos[hash]) {
-                    window.SafetyGraphEcosystem.switchToDemo(hash);
-                }
-            });
-            
-            console.log('🚀 SafetyGraph Ecosystem initialized successfully!');
+            window.AgenticX5Portal = new AgenticX5Portal();
+            console.log('🚀 AgenticX5 Portal initialized successfully!');
         });
         
-        // ========================
-        // PERFORMANCE MONITORING
-        // ========================
-        if ('PerformanceObserver' in window) {
-            const observer = new PerformanceObserver((list) => {
-                for (const entry of list.getEntries()) {
-                    if (entry.entryType === 'navigation') {
-                        console.log(`⚡ Page load time: ${Math.round(entry.loadEventEnd - entry.fetchStart)}ms`);
-                    }
-                }
-            });
-            observer.observe({ entryTypes: ['navigation'] });
-        }
-        
-        // ========================
-        // ERROR HANDLING
-        // ========================
+        // Error handling
         window.addEventListener('error', (event) => {
-            console.error('🚨 SafetyGraph Ecosystem Error:', event.error);
-            
-            if (window.gtag) {
-                gtag('event', 'ecosystem_error', {
-                    error_message: event.error?.message || 'Unknown error',
-                    error_source: event.filename || 'Unknown source',
-                    error_line: event.lineno || 0
-                });
-            }
+            console.error('🚨 AgenticX5 Portal Error:', event.error);
         });
     </script>
 </body>
